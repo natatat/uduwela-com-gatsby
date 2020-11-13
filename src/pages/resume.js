@@ -1,10 +1,13 @@
 import React from "react"
-import Header from "../components/header"
 
-export default function Resume() {
-  return (
-    <div>
-      <Header text="Resume" />
-    </div>
-  )
+class Resume extends React.Component {
+  componentDidMount() {
+    window.location.replace("http://nat.uduwela.com/natalie-uduwela-resume.pdf")
+  }
+
+  render() {
+    return null
+  }
 }
+
+export default Resume
