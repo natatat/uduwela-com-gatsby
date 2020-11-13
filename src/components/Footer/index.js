@@ -63,7 +63,6 @@ class Footer extends React.Component {
         <div
           role="button"
           aria-label="Expand menu"
-          tabIndex={0}
           onClick={this.toggleMobileNav}
           onKeyDown={this.toggleMobileNav}
           className={`${styles.chevron} ${
