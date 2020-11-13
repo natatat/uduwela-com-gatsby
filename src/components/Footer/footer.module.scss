@@ -1,3 +1,24 @@
+/* mobile */
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 0 8vmin;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mobileNav:not(.hide) {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .chevron {
+    display: none;
+  }
+}
+
 .footer {
   font-family: TheodorSlantedA;
   font-size: 5vmin;
@@ -14,88 +35,13 @@
   cursor: crosshair;
 }
 
-/* mobile start */
-@media only screen and (max-width: 600px) {
-  .about {
-    font-size: 18vmin;
-    line-height: 16vmin;
-  }
-
-  .content {
-    padding: 16vmin 8vmin;
-  }
-
-  .footer {
-    padding: 0 8vmin;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .nav.mobile:not(.hide) {
-    display: block;
-  }
-}
-
-ul.nav.mobile {
-  font-size: 5em;
-  margin-block-start: 1vmin;
-  margin-block-end: 5vmin;
-}
-
-ul.mobile > li {
-  display: block;
-}
-/* mobile end */
-
-@media only screen and (min-width: 600px) {
-  .chevron {
-    display: none;
-  }
-
-  .about {
-    font-size: 16vmin;
-    line-height: 14vmin;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .chevron {
-    display: none;
-  }
-
-  .about {
-    font-size: 12vmin;
-    line-height: 11vmin;
-  }
-}
-
-@media only screen and (min-width: 1050px) {
-  .chevron {
-    display: none;
-  }
-
-  .about {
-    font-size: 14vmin;
-    line-height: 12vmin;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .chevron {
-    display: none;
-  }
-
-  .about {
-    font-size: 18vmin;
-    line-height: 16vmin;
-  }
-}
-
 .nav {
   margin-block-start: 0.7em;
   margin-block-end: 1em;
+
+  > li {
+    display: inline-block;
+  }
 }
 
 .navLeft {
@@ -109,4 +55,38 @@ ul.mobile > li {
 
 .mobileNav {
   display: none;
+  font-size: 5em;
+  margin-block-start: 1vmin;
+  margin-block-end: 5vmin;
+
+  > li {
+    display: block;
+  }
+}
+
+.chevron {
+  font-size: 5em;
+  text-align: center;
+  margin-top: 1vmin;
+  margin-bottom: -10vmin;
+  margin-left: -8vmin;
+
+  &::before {
+    border-style: solid;
+    border-width: 4px 4px 0 0;
+    content: "";
+    display: inline-block;
+    height: 0.45em;
+    left: 0.15em;
+    top: 0.15em;
+    position: relative;
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 0.45em;
+  }
+
+  &.down::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
 }

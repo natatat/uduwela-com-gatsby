@@ -48,10 +48,9 @@ export default function Footer() {
         </li>
       </ul>
 
-      <div class="chevron up"></div>
+      <div className={`${styles.chevron} ${styles.down}`}></div>
       <ul className={`${styles.mobileNav} hide`}>
-        <li class="chevron down"></li>
-        <li class="left">
+        <li>
           <a
             href="https://www.notion.so/uduwela/17f2affc87ea43a58efe52113d34f94c?v=9d5f2efbf1dc4b4a92ade63d3541f75b"
             target="_blank"
@@ -60,7 +59,7 @@ export default function Footer() {
             portfolio
           </a>
         </li>
-        <li class="left">
+        <li>
           <a
             href="http://nat.uduwela.com/natalie-uduwela-resume-2020.pdf"
             target="_blank"
@@ -69,7 +68,7 @@ export default function Footer() {
             resume
           </a>
         </li>
-        <li class="left">
+        <li>
           <a
             href="https://www.linkedin.com/in/natalieuduwela/"
             target="_blank"
@@ -78,7 +77,7 @@ export default function Footer() {
             linkedin
           </a>
         </li>
-        <li class="left">
+        <li>
           <a
             href="http://instagram.com/abc.nat"
             target="_blank"
@@ -87,7 +86,7 @@ export default function Footer() {
             instagram
           </a>
         </li>
-        <li class="left">
+        <li>
           <a href="mailto:nat@uduwela.com" target="_blank" rel="noreferrer">
             email
           </a>

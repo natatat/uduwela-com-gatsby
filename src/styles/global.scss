@@ -17,10 +17,6 @@ body {
   display: none;
 }
 
-ul > li {
-  display: inline-block;
-}
-
 a {
   text-decoration: none;
   color: white;
@@ -28,5 +24,45 @@ a {
   &:hover {
     border-bottom: 2px solid white;
     cursor: crosshair;
+  }
+}
+
+// TODO: all media queries below
+@media only screen and (max-width: 600px) {
+  .about {
+    font-size: 18vmin;
+    line-height: 16vmin;
+  }
+
+  .content {
+    padding: 16vmin 8vmin;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .about {
+    font-size: 16vmin;
+    line-height: 14vmin;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    font-size: 12vmin;
+    line-height: 11vmin;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .about {
+    font-size: 14vmin;
+    line-height: 12vmin;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .about {
+    font-size: 18vmin;
+    line-height: 16vmin;
   }
 }
