@@ -67,7 +67,7 @@
 .chevron {
   font-size: 5em;
   text-align: center;
-  margin-top: 1vmin;
+  margin-top: 3vmin;
   margin-bottom: -10vmin;
   margin-left: -8vmin;
 
@@ -85,8 +85,12 @@
     width: 0.45em;
   }
 
-  &.down::before {
-    top: 0;
-    transform: rotate(135deg);
+  &.down {
+    margin-top: 1vmin;
+
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
   }
 }
