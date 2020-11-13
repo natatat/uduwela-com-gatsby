@@ -11,6 +11,10 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  &:not(.user-is-tabbing) div {
+    outline: none;
+  }
 }
 
 .hide {

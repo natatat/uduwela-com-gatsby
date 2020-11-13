@@ -4,23 +4,23 @@ import Footer from "../components/Footer"
 export default function Home() {
   return (
     <div>
-      <section class="scratched-in">
-        <div class="black-bg"></div>
-        <canvas class="in"></canvas>
+      <section className="scratched-in">
+        <div className="black-bg"></div>
+        <canvas className="in"></canvas>
       </section>
 
-      <section class="scratched-out">
-        <div class="content">
-          <div class="about">
+      <section className="scratched-out">
+        <div className="content">
+          <div className="about">
             I'm Natalie – a designer, developer, and type-enthusiast based in
             California.
           </div>
         </div>
-        <canvas class="out"></canvas>
+        <canvas className="out"></canvas>
       </section>
 
-      <div class="cursor"></div>
-      <div class="cursor-text">click & drag</div>
+      <div className="cursor"></div>
+      <div className="cursor-text">click & drag</div>
 
       <Footer />
     </div>
