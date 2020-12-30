@@ -1,0 +1,33 @@
+.cursor {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s, height 0.25s;
+}
+
+.cursorText {
+  font-family: TheodorSlantedA;
+  font-size: 96px;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 300px;
+  height: 50px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
+  transform: translate(10px, -50%);
+  transition: width 0.25s, height 0.25s;
+  padding-left: 10px;
+}
+
+// TODO
+.isDown {
+  width: 100px;
+  height: 100px;
+}
