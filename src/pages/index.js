@@ -1,27 +1,30 @@
-import React from "react"
+import React, { useRef } from "react"
 import Footer from "../components/Footer"
+import Cursor from "../components/Cursor"
 import styles from "./index.module.scss"
 
-export default function Home() {
+const Home = () => {
+  const canvasInRef = useRef()
+  const canvasOutRef = useRef()
   return (
-    <div>
-      <section className="scratched-in">
+    <>
+      <section className={styles.scratchedIn}>
         <div className={styles.blackBg}></div>
-        <canvas className="in"></canvas>
+        <canvas ref={canvasInRef} className={`${styles.canvas} in`}></canvas>
       </section>
 
-      <section className="scratched-out">
+      <section className={styles.scratchedOut}>
         <div className={styles.content}>
           I'm Natalie – a designer, developer, and type-enthusiast based in
           California.
         </div>
-        <canvas className="out"></canvas>
+        <canvas ref={canvasOutRef} className={styles.canvas}></canvas>
       </section>
 
-      <div className={styles.cursor}></div>
-      <div className={styles.cursorText}>click & drag</div>
-
+      <Cursor />
       <Footer />
-    </div>
+    </>
   )
 }
+
+export default Home
