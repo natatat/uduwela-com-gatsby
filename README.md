@@ -1,5 +1,12 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1b480710-a1ee-41ae-9f16-58de4e38082c/deploy-status)](https://app.netlify.com/sites/serene-mestorf-208d1e/deploys)
 
+### TODO
+
+- [ ] add HTML Canvas support in home page component
+- [ ] redirect portfolio & resume via netlify
+- [ ] connect to nat.uduwela.com
+- [ ] `later` build portfolio page (instead of using Notion)
+
 ### **Develop:**
 
 ```shell
