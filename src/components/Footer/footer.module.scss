@@ -3,14 +3,6 @@
   .footer {
     padding: 0 8vmin;
   }
-
-  .nav {
-    display: none;
-  }
-
-  .mobileNav:not(.hide) {
-    display: block;
-  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -33,35 +25,6 @@
   padding: 0 12vmin;
   z-index: 1;
   cursor: crosshair;
-}
-
-.nav {
-  margin-block-start: 0.7em;
-  margin-block-end: 1em;
-
-  > li {
-    display: inline-block;
-  }
-}
-
-.navLeft {
-  margin-right: 1em;
-}
-
-.navRight {
-  float: right;
-  margin-left: 1em;
-}
-
-.mobileNav {
-  display: none;
-  font-size: 5em;
-  margin-block-start: 1vmin;
-  margin-block-end: 5vmin;
-
-  > li {
-    display: block;
-  }
 }
 
 .chevron {

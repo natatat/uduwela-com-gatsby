@@ -1,0 +1,39 @@
+.nav {
+  margin-block-start: 0.7em;
+  margin-block-end: 1em;
+
+  > li {
+    display: inline-block;
+  }
+}
+
+.navLeft {
+  margin-right: 1em;
+}
+
+.navRight {
+  float: right;
+  margin-left: 1em;
+}
+
+.mobileNav {
+  display: none;
+  font-size: 5em;
+  margin-block-start: 1vmin;
+  margin-block-end: 5vmin;
+
+  > li {
+    display: block;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+
+  .mobileNav:not(.hide) {
+    display: block;
+  }
+}

@@ -1,122 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
+import Navigation from "../Navigation"
 import styles from "./footer.module.scss"
 
-class Footer extends React.Component {
-  constructor(props) {
-    super(props)
+const Footer = () => {
+  const [expandMobileNav, setExpandMobileNav] = useState(false)
 
-    this.state = { expandMobileNav: false }
-    this.toggleMobileNav = this.toggleMobileNav.bind(this)
+  const toggleMobileNav = () => {
+    setExpandMobileNav(!expandMobileNav)
   }
 
-  toggleMobileNav() {
-    this.setState(state => ({ expandMobileNav: !state.expandMobileNav }))
-  }
+  return (
+    <div className={styles.footer}>
+      <Navigation />
 
-  render() {
-    return (
-      <div className={styles.footer}>
-        <ul className={styles.nav}>
-          <li className={styles.navLeft}>
-            <a
-              href="https://www.notion.so/uduwela/17f2affc87ea43a58efe52113d34f94c?v=9d5f2efbf1dc4b4a92ade63d3541f75b"
-              target="_blank"
-              rel="noreferrer"
-            >
-              portfolio
-            </a>
-          </li>
-          <li className={styles.navLeft}>
-            <a
-              href="http://nat.uduwela.com/natalie-uduwela-resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              resume
-            </a>
-          </li>
-          <li className={styles.navRight}>
-            <a href="mailto:nat@uduwela.com" target="_blank" rel="noreferrer">
-              email
-            </a>
-          </li>
-          <li className={styles.navRight}>
-            <a
-              href="http://instagram.com/abc.nat"
-              target="_blank"
-              rel="noreferrer"
-            >
-              instagram
-            </a>
-          </li>
-          <li className={styles.navRight}>
-            <a
-              href="https://www.linkedin.com/in/natalieuduwela/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              linkedin
-            </a>
-          </li>
-        </ul>
-
-        <div
-          role="button"
-          aria-label="Expand menu"
-          onClick={this.toggleMobileNav}
-          onKeyDown={this.toggleMobileNav}
-          className={`${styles.chevron} ${
-            this.state.expandMobileNav ? styles.down : styles.up
-          }`}
-        ></div>
-        {this.state.expandMobileNav && (
-          <ul className={styles.mobileNav}>
-            <li>
-              <a
-                href="https://www.notion.so/uduwela/17f2affc87ea43a58efe52113d34f94c?v=9d5f2efbf1dc4b4a92ade63d3541f75b"
-                target="_blank"
-                rel="noreferrer"
-              >
-                portfolio
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://nat.uduwela.com/natalie-uduwela-resume-2020.pdf"
-                target="_blank"
-                rel="noreferrer"
-              >
-                resume
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/natalieuduwela/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                linkedin
-              </a>
-            </li>
-            <li>
-              <a
-                href="http://instagram.com/abc.nat"
-                target="_blank"
-                rel="noreferrer"
-              >
-                instagram
-              </a>
-            </li>
-            <li>
-              <a href="mailto:nat@uduwela.com" target="_blank" rel="noreferrer">
-                email
-              </a>
-            </li>
-          </ul>
-        )}
-      </div>
-    )
-  }
+      <div
+        role="button"
+        aria-label="Expand menu"
+        onClick={toggleMobileNav}
+        onKeyDown={toggleMobileNav}
+        className={`${styles.chevron} ${
+          expandMobileNav ? styles.down : styles.up
+        }`}
+      ></div>
+      {expandMobileNav && <Navigation mobile={true} />}
+    </div>
+  )
 }
 
 export default Footer
